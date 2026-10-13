@@ -30,6 +30,7 @@ while insufficient_balance == 0:
             insufficient_balance = 1
         else:
             print("Not enough balance. Refunded", Balance)
+            insufficient_balance = 1
     elif item_code == "02":
         item_price = 60
         if Balance >= item_price:
@@ -38,6 +39,7 @@ while insufficient_balance == 0:
             insufficient_balance = 1
         else:
             print("Not enough balance. Refunded", Balance)
+            insufficient_balance = 1
     elif item_code == "03":
         item_price = 80
         if Balance >= item_price:
@@ -46,6 +48,7 @@ while insufficient_balance == 0:
             insufficient_balance = 1
         else:
             print("Not enough balance. Refunded", Balance)
+            insufficient_balance = 1
     elif item_code == "04":
         item_price = 90
         if Balance >= item_price:
@@ -54,6 +57,7 @@ while insufficient_balance == 0:
             insufficient_balance = 1
         else:
             print("Not enough balance. Refunded", Balance)
+            insufficient_balance = 1
     elif item_code == "05":
         item_price = 140
         if Balance >= item_price:
@@ -61,8 +65,17 @@ while insufficient_balance == 0:
             print(f"Successful purchase, Your change is {(Change / 100):.2f}")
             insufficient_balance = 1
         else:
-             print("Not enough balance. Refunded", Balance)    
+             print("Not enough balance. Refunded", Balance)  
+             insufficient_balance = 1  
 
+    continuation = input("Do you want to continue?: y/n: ") # Added a repeat function for concecutive use of the machine back to back without stacking the variables  from before
+    if continuation.upper() == "Y" or continuation.upper() == "YES":
+        insufficient_balance = 0
+        Done = "FALSE" 
+        Balance = 0
+        Change = 0
+        coins = ""
+        item_code = ""
 
 
 
