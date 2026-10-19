@@ -80,7 +80,6 @@ while insufficient_balance == 0:
         Change = 0
         coins = ""
         item_code = ""
-        coins = ""
     else:
         print("Thank you for using this machine")
 
