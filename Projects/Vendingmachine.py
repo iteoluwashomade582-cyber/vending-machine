@@ -71,6 +71,8 @@ while insufficient_balance == 0:
         else:
              print("Not enough balance. Refunded", Balance)  
              insufficient_balance = 1  
+    else:
+        print("Invalid number, please try again")
 
     continuation = input("Are you finished with the machine?: y/n: ") # Added a repeat function for concecutive use of the machine back to back without stacking the variables  from before
     if continuation.upper() == "N" or continuation.upper() == "NO":
